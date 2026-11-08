@@ -8,6 +8,12 @@
 [![Pytest](https://img.shields.io/badge/Pytest-15%2F15%20Passing-green.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://ecommerce-growth-product-analytics.streamlit.app/)
+
+> 🌐 **Live Interactive Dashboard**: **[https://ecommerce-growth-product-analytics.streamlit.app/](https://ecommerce-growth-product-analytics.streamlit.app/)**  
+> 🚀 **Direct 1-Click Deploy Link**: **[Launch instantly on Streamlit Community Cloud](https://share.streamlit.io/deploy?repository=Integenpiyush/ecommerce-growth-product-analytics&branch=main&mainModule=dashboard/app.py)**  
+> 💻 **Local Port (Currently Active)**: `http://localhost:8502`
+
 An end-to-end, production-style e-commerce growth and product analytics platform built from scratch. Demonstrates senior competencies across **Data Analyst**, **Product Analyst**, **Business Analyst**, and **Analytics Engineer** roles.
 
 The platform models, ingests, validates, and analyzes multi-touch retail data to answer the core questions that drive executive decision-making:
@@ -242,19 +248,22 @@ Open your browser to `http://localhost:8501`.
 
 ---
 
-## 🌐 Cloud Deployment (Streamlit Community Cloud)
+## 🌐 Live Cloud Deployment (Streamlit Community Cloud)
 
-This platform is configured for **zero-friction 1-click deployment** on Streamlit Community Cloud:
+The interactive dashboard is configured for direct public access:
 
-1. **Push this repository to your GitHub account**.
-2. Sign in to [share.streamlit.io](https://share.streamlit.io/).
-3. Click **"New app"**, select your repository and branch (`main`).
-4. Set the **Main file path** to `dashboard/app.py`.
-5. *(Optional)* If connecting to a hosted PostgreSQL database (Supabase, Neon, AWS RDS), add your connection URL to **App Settings > Secrets**:
+- 🔗 **Production Live URL**: **[https://ecommerce-growth-product-analytics.streamlit.app/](https://ecommerce-growth-product-analytics.streamlit.app/)**
+- ⚡ **Direct 1-Click Launch**: **[Deploy / Launch on share.streamlit.io](https://share.streamlit.io/deploy?repository=Integenpiyush/ecommerce-growth-product-analytics&branch=main&mainModule=dashboard/app.py)**
+
+### Cloud Deployment Configuration:
+1. **GitHub Repository**: `Integenpiyush/ecommerce-growth-product-analytics`
+2. **Branch**: `main`
+3. **Main File Path**: `dashboard/app.py`
+4. **Zero-Configuration Mode**: Runs out of the box using embedded SQLite (`data/processed/ecommerce.db`).
+5. *(Optional)* To connect to an external hosted PostgreSQL instance (AWS RDS, Supabase, Neon), supply `POSTGRES_URL` in **App Settings > Secrets**:
    ```toml
    POSTGRES_URL = "postgresql://user:password@ep-host.region.aws.neon.tech/ecommerce_analytics"
    ```
-   *If `POSTGRES_URL` is omitted, the app automatically runs in standalone local mode using the pre-built `data/processed/ecommerce.db` SQLite database with 100% functionality.*
 
 ---
 
