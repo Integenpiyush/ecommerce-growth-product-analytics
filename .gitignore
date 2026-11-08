@@ -1,0 +1,32 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Data files (raw / processed large SQLite / cache)
+*.db
+*.sqlite
+*.sqlite3
+data/processed/*.parquet
+data/processed/*.feather
+
+# Environment variables
+.env
+
+# Streamlit local credentials & cache
+.streamlit/secrets.toml
+
+# Pytest / coverage cache
+.pytest_cache/
+.coverage
+htmlcov/
+
+# OS files
+.DS_Store
+Thumbs.db
