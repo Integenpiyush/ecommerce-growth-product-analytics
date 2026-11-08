@@ -19,6 +19,49 @@ The platform models, ingests, validates, and analyzes multi-touch retail data to
 
 ---
 
+## 🎯 For Recruiters & Hiring Managers: 2-Minute Portfolio Overview
+
+If you are evaluating this repository for **Senior Data Analyst**, **Product Analyst**, **Business Analyst**, or **Analytics Engineer** roles, here is what you will find:
+
+1. **Production Code Architecture (No "single notebook" shortcuts)**:
+   - Full modularization in [`src/`](src/): dedicated engines for KPIs, Clickstream Funnels, RFM, Attribution, and Hypothesis Testing.
+   - Comprehensive test suite in [`tests/`](tests/) with **15 passing pytest unit tests** covering financial formulas, monotonicity, and statistical bounds.
+2. **Kimball Star Schema Data Warehouse**:
+   - Production PostgreSQL DDL in [`sql/ddl/schema_postgresql.sql`](sql/ddl/schema_postgresql.sql) with conformed dimensions, foreign key constraints, and B-tree composite indices.
+   - Dual-engine fallback to embedded SQLite for zero-credential instant local & cloud demo execution.
+3. **Advanced SQL Mastery**:
+   - 5 modular SQL files in [`sql/analytics/`](sql/analytics/) demonstrating CTEs, `LAG()`, `NTILE(5)`, `AVG() OVER (ROWS BETWEEN 6 PRECEDING AND CURRENT ROW)`, and month-offset cohort matrices.
+4. **Statistical Rigor & Guardrail Metrics**:
+   - Two-sample proportion Z-test ($p = 0.0455 < 0.05$, $95\%$ CI strictly excluding zero) paired with Welch's t-test on ARPU ($p = 0.109$) to ensure basket value was protected during a 1-step checkout rollout.
+5. **Commercial Business Case Studies**:
+   - 6 detailed empirical case studies in [`reports/business_case_studies.md`](reports/business_case_studies.md) covering revenue leakages, mobile funnel attrition, RFM customer tiers, and CAC/ROAS budget reallocation.
+6. **Exhaustive Interview Defense System**:
+   - Complete 8-part interview preparation curriculum in [`docs/interview/`](docs/interview/) featuring **100 technical and behavioral interview questions with answers**, a 6-level mock simulation, and a 14-day study plan.
+
+---
+
+## 🖥️ Dashboard Interactive Interface
+
+The platform includes an interactive 5-page Streamlit dashboard (`dashboard/app.py`):
+
+```
++--------------------------------------------------------------------------------------------------+
+|  [Sidebar Filters: Order Date Range | Acquisition Channel | Device Platform | Product Category]   |
++--------------------------------------------------------------------------------------------------+
+|  TABS:  [📈 Executive Overview]  [🛒 Product Funnel]  [👥 Customer & RFM]  [🎯 Marketing]  [🧪 A/B Test] |
++--------------------------------------------------------------------------------------------------+
+|  [Net Revenue: $4.83M]  [Gross Profit: $2.03M]  [AOV: $322.73]  [Orders: 14,978]  [Repeat: 76.6%] |
++--------------------------------------------------------------------------------------------------+
+|  Monthly Revenue Trend & MoM Growth (%)            |  Operational Leakage (Returns & Cancels)    |
+|  [ Bar: Net Revenue | Line: Gross Profit ($) ]      |  [ Donut: 83.2% Completed | 10.1% Returned ] |
++----------------------------------------------------+---------------------------------------------+
+|  7-Day & 30-Day Rolling Moving Averages            |  Category Revenue & Profit Breakdown         |
+|  [ Daily Revenue vs 7d Smoothed vs 30d Trend ]     |  [ Grouped Bar: Revenue vs Gross Profit ]    |
++--------------------------------------------------------------------------------------------------+
+```
+
+---
+
 ## 🏛️ Architecture Overview
 
 ```
