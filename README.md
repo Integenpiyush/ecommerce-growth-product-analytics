@@ -1,5 +1,6 @@
 # E-commerce Growth & Product Analytics Platform
 
+[![CI Pipeline](https://github.com/Integenpiyush/ecommerce-growth-product-analytics/actions/workflows/ci.yml/badge.svg)](https://github.com/Integenpiyush/ecommerce-growth-product-analytics/actions)
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-14%2B-336791.svg)](https://www.postgresql.org/)
 [![SQLite](https://img.shields.io/badge/SQLite-Demo%20Mode-003B57.svg)](https://www.sqlite.org/)
